@@ -1,0 +1,80 @@
+@mixin chat{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    width:30%;
+    border-radius:20px;
+    margin: 0 auto;
+    box-shadow: 20px 20px 40px rgba(219, 217, 217, 0.815),
+                 -20px -20px 40px rgba(211, 202, 202, 0.849); 
+
+
+                
+}
+@mixin chattext{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+$colorbody:#fff;
+$black:#000;
+/*
+$breacks: (
+    tb : 1000px,
+    mb : 600px,
+    mbp : 300px
+);
+
+
+@mixin mediaquery($breack) {
+    @media screen and (max-width: map-get($breacks,breack))  {
+        @content;
+    }
+}
+*/
+body{
+    background-color: $colorbody;
+}
+
+.chatbot{
+    @include chat;
+}
+
+.inputbot{
+    @include chattext;
+
+    #inputTxt{
+        width: 20vw;
+        height: 7vh;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 15px;
+        background-color:rgb(236, 236, 236);
+    }
+   
+    #chatbtn{
+        padding:10px 15px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 15px;
+        border: none;
+
+    }
+    #chatbtn:hover{
+        color: $colorbody;
+        background-color:$black;
+  }
+}
+
+.chatp{
+    background-color: rgba(245, 239, 239, 0.685);
+    height:100vh;
+    width: 100%;
+    font-size: 18px;
+}
+
+
